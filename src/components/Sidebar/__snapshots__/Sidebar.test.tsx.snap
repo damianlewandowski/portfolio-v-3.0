@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<WithStyles(ForwardRef(Drawer))
+  anchor="left"
+  className="makeStyles-drawer-1"
+  classes={
+    Object {
+      "paper": "makeStyles-drawerPaper-2",
+    }
+  }
+  variant="permanent"
+>
+  <Styled(MuiBox)
+    bgcolor="primary.main"
+    className="makeStyles-box-4"
+    color="primary.contrastText"
+  >
+    <WithStyles(ForwardRef(Typography))
+      className="makeStyles-textContainer-5"
+      variant="h5"
+    >
+      damian
+      <br />
+       
+      <strong>
+        lewandowski
+      </strong>
+    </WithStyles(ForwardRef(Typography))>
+  </Styled(MuiBox)>
+  <NavItems />
+</WithStyles(ForwardRef(Drawer))>
+`;

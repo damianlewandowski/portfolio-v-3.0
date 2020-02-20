@@ -1,0 +1,66 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders correctly 1`] = `
+<WithStyles(ForwardRef(List))>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    key="Profile"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <PersonIcon
+        color="primary"
+      />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Profile"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    key="Experience"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <UpdateIcon
+        color="secondary"
+      />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Experience"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    key="Projects"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <ListAltIcon
+        style={
+          Object {
+            "color": "#9c27b0",
+          }
+        }
+      />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Projects"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <WithStyles(ForwardRef(ListItem))
+    button={true}
+    key="Skills"
+  >
+    <WithStyles(ForwardRef(ListItemIcon))>
+      <EqualizerIcon
+        style={
+          Object {
+            "color": "#4caf50",
+          }
+        }
+      />
+    </WithStyles(ForwardRef(ListItemIcon))>
+    <WithStyles(ForwardRef(ListItemText))
+      primary="Skills"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+</WithStyles(ForwardRef(List))>
+`;
