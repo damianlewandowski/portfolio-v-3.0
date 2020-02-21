@@ -1,6 +1,5 @@
 import React from "react";
 import Sidebar from "./components/Sidebar/Sidebar";
-import { Grid } from "@material-ui/core";
 import Profile from "./components/Profile/Profile";
 import Experience from "./components/Experience/Experience";
 import Projects from "./components/Projects/Projects";
@@ -11,10 +10,18 @@ function App() {
     <div>
       <Sidebar />
 
-      <Profile />
-      <Experience />
-      <Projects />
-      <Skills />
+      <div id={"profile"}>
+        <Profile />
+      </div>
+      <div id={"experience"}>
+        <Experience />
+      </div>
+      <div id="projects">
+        <Projects />
+      </div>
+      <div id="skills">
+        <Skills />
+      </div>
     </div>
   );
 }
