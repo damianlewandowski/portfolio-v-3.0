@@ -15,30 +15,45 @@ interface Props {
   onClick?: () => void;
 }
 
+interface Item extends IconItem {
+  href: string;
+}
+
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     resume: {
       color: theme.palette.text.primary,
       fontSize: `${theme.typography.h5.fontSize}`
+    },
+    link: {
+      textDecoration: "none",
+      color: "inherit"
     }
   })
 );
 
 const NavItems = ({ onClick }: Props) => {
   const classes = useStyles();
-  const items: IconItem[] = [
-    { text: "Profile", icon: <PersonIcon color={"primary"} /> },
+  const items: Item[] = [
+    {
+      text: "Profile",
+      icon: <PersonIcon color={"primary"} />,
+      href: "#profile"
+    },
     {
       text: "Experience",
-      icon: <UpdateIcon style={{ color: blueGrey[800] }} />
+      icon: <UpdateIcon style={{ color: blueGrey[800] }} />,
+      href: "#experience"
     },
     {
       text: "Projects",
-      icon: <ListAltIcon style={{ color: purple[500] }} />
+      icon: <ListAltIcon style={{ color: purple[500] }} />,
+      href: "#projects"
     },
     {
       text: "Skills",
-      icon: <EqualizerIcon style={{ color: green[500] }} />
+      icon: <EqualizerIcon style={{ color: green[500] }} />,
+      href: "#skills"
     }
   ];
 
@@ -51,10 +66,12 @@ const NavItems = ({ onClick }: Props) => {
         />
       </ListItem>
       {items.map(item => (
-        <ListItem button key={item.text} onClick={onClick}>
-          <ListItemIcon>{item.icon}</ListItemIcon>
-          <ListItemText primary={item.text} />
-        </ListItem>
+        <a key={item.text} className={classes.link} href={item.href}>
+          <ListItem button onClick={onClick}>
+            <ListItemIcon>{item.icon}</ListItemIcon>
+            <ListItemText primary={item.text} />
+          </ListItem>
+        </a>
       ))}
     </List>
   );

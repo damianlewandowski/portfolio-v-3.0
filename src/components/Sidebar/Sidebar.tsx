@@ -1,13 +1,11 @@
 import React from "react";
 import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import Typography from "@material-ui/core/Typography";
-import { AppBar, Box, Hidden, IconButton, Toolbar } from "@material-ui/core";
+import { AppBar, Hidden, IconButton, Toolbar } from "@material-ui/core";
 import NavItems from "./NavItems";
 import MenuIcon from "@material-ui/icons/Menu";
 
 import { SIDEBAR_WIDTH } from "../../constants";
-import App from "../../App";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({

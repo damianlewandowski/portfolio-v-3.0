@@ -1,13 +1,13 @@
-import React from 'react';
-import {Typography} from "@material-ui/core";
+import React from "react";
 import withPage from "../Page/Page";
+import Header from "../Header";
 
 const Projects = () => {
-    return (
-        <Typography variant="h2" gutterBottom>
-            Projects
-        </Typography>
-    );
+  return (
+    <div>
+      <Header title={"Projects"} />
+    </div>
+  );
 };
 
 export default withPage(Projects);

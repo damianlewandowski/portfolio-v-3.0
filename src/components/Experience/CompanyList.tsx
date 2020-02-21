@@ -1,7 +1,6 @@
 import React from "react";
 import List from "@material-ui/core/List";
 
-import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import CompanyListItem from "./CompanyListItem";
 import experienceJson from "../../static/experience.json";
 

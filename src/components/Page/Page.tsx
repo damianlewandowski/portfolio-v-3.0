@@ -1,4 +1,4 @@
-import React, { CSSProperties } from "react";
+import React from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import { Grid, GridProps } from "@material-ui/core";
 import { SIDEBAR_WIDTH } from "../../constants";

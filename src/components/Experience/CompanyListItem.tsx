@@ -25,11 +25,18 @@ const useStyles = makeStyles((theme: Theme) =>
       marginTop: theme.spacing(3),
       [theme.breakpoints.up("sm")]: { paddingLeft: 50 }
     },
+    companyName: {
+      borderRight: "2px solid grey",
+      paddingRight: "2px"
+    },
     leftBorder: {
       borderLeft: `2px solid grey`
     },
     borderPadding: {
-      padding: "0 2px"
+      padding: "0 5px"
+    },
+    firstItemLeftPadding: {
+      paddingLeft: "5px"
     }
   })
 );
@@ -46,7 +53,9 @@ const CompanyListItem = ({
   return (
     <ListItem className={classes.experienceItem} divider>
       <div style={{ display: "flex" }}>
-        <Typography variant={"h4"}>{companyName}</Typography>
+        <Typography className={classes.companyName} variant={"h4"}>
+          {companyName}
+        </Typography>
 
         <List
           style={{
@@ -55,6 +64,7 @@ const CompanyListItem = ({
         >
           {titles.map((title, i) => {
             const leftBorder = classNames({
+              [classes.firstItemLeftPadding]: i === 0,
               [classes.leftBorder]: i !== 0,
               [classes.borderPadding]: true
             });
