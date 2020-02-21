@@ -2,65 +2,135 @@ import React from "react";
 import { createStyles, Theme, makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
 import Typography from "@material-ui/core/Typography";
-import { Box } from "@material-ui/core";
+import { AppBar, Box, Hidden, IconButton, Toolbar } from "@material-ui/core";
 import NavItems from "./NavItems";
+import MenuIcon from "@material-ui/icons/Menu";
 
-const drawerWidth = 250;
+import { SIDEBAR_WIDTH } from "../../constants";
+import App from "../../App";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
+    root: {
+      display: "flex"
+    },
     drawer: {
-      width: drawerWidth,
-      flexShrink: 0
+      width: SIDEBAR_WIDTH,
+      [theme.breakpoints.up("sm")]: {
+        width: SIDEBAR_WIDTH,
+        flexShrink: 0
+      }
     },
     drawerPaper: {
-      width: drawerWidth
+      width: SIDEBAR_WIDTH
     },
     sideNav: {
       height: "100vh"
     },
-    box: {
-      position: "relative",
-      width: "100%",
-      "&::after": {
-        content: "''",
-        display: "block",
-        paddingBottom: "100%"
-      }
-    },
     textContainer: {
       position: "absolute",
-      left: "10%",
+      left: "50%",
       top: "50%",
+      transform: "translate(-50%, -50%)",
       textTransform: "capitalize"
+    },
+
+    appBar: {
+      // [theme.breakpoints.up("sm")]: {
+      //   width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
+      //   marginLeft: SIDEBAR_WIDTH
+      // }
+    },
+
+    menuButton: {
+      [theme.breakpoints.up("sm")]: {
+        display: "none"
+      }
     }
   })
 );
 
-export default function PermanentDrawerLeft() {
+export default function Sidebar() {
   const classes = useStyles();
 
-  return (
-    <Drawer
-      className={classes.drawer}
-      variant="permanent"
-      classes={{
-        paper: classes.drawerPaper
-      }}
-      anchor="left"
-    >
-      <Box
-        className={classes.box}
-        bgcolor="primary.main"
-        color="primary.contrastText"
-      >
-        <Typography className={classes.textContainer} variant="h5">
-          damian
-          <br /> <strong>lewandowski</strong>
-        </Typography>
-      </Box>
+  const [mobileOpen, setMobileOpen] = React.useState(false);
 
-      <NavItems />
-    </Drawer>
+  const handleDrawerToggle = () => {
+    setMobileOpen(!mobileOpen);
+  };
+  return (
+    <div className={classes.root}>
+      <Hidden smUp>
+        <AppBar>
+          <Toolbar>
+            <IconButton
+              color="inherit"
+              aria-label="open drawer"
+              edge="start"
+              onClick={handleDrawerToggle}
+              className={classes.menuButton}
+            >
+              <MenuIcon />
+            </IconButton>
+          </Toolbar>
+        </AppBar>
+      </Hidden>
+
+      <nav className={classes.drawer} aria-label="mailbox folders">
+        {/* The implementation can be swapped with js to avoid SEO duplication of links. */}
+        <Hidden smUp implementation="css">
+          <Drawer
+            className={classes.drawer}
+            variant="temporary"
+            classes={{
+              paper: classes.drawerPaper
+            }}
+            anchor="left"
+            open={mobileOpen}
+            onClose={handleDrawerToggle}
+            ModalProps={{
+              keepMounted: true // Better open performance on mobile.
+            }}
+          >
+            <NavItems onClick={() => handleDrawerToggle()} />
+          </Drawer>
+        </Hidden>
+        <Hidden xsDown implementation="css">
+          <Drawer
+            className={classes.drawer}
+            variant="permanent"
+            classes={{
+              paper: classes.drawerPaper
+            }}
+            anchor="left"
+            open
+          >
+            <NavItems />
+          </Drawer>
+        </Hidden>
+      </nav>
+
+      {/*<Drawer*/}
+      {/*  className={classes.drawer}*/}
+      {/*  variant="permanent"*/}
+      {/*  classes={{*/}
+      {/*    paper: classes.drawerPaper*/}
+      {/*  }}*/}
+      {/*  anchor="left"*/}
+      {/*  open={mobileOpen}*/}
+      {/*>*/}
+      {/*  <Box*/}
+      {/*    className={classes.box}*/}
+      {/*    bgcolor="primary.main"*/}
+      {/*    color="primary.contrastText"*/}
+      {/*  >*/}
+      {/*    <Typography className={classes.textContainer} variant="h5">*/}
+      {/*      portfolio*/}
+      {/*    </Typography>*/}
+      {/*  </Box>*/}
+
+      {/*  <NavItems />*/}
+      {/*</Drawer>*/}
+    </div>
   );
 }

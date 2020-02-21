@@ -1,0 +1,28 @@
+[
+  {
+    "companyName": "Scalac",
+    "startDate": 2018,
+    "endDate": 2020,
+    "titles": ["Frontend", "Fullstack", "NodeJS"],
+    "accomplishments": [
+      "Built blockchain explorer for analyzing recent transactions occuring on it in 1 minute windows.",
+      "Created visualization graphs, built intuitive UI's using MaterialUI and integrated paypal into registration process.",
+      "Maintained and improved internal systems for recruitment purposes (consulting company).",
+      "Reduced amount of neccesary API requests by implementing fake data generator in python.",
+      "Designed and implemented REST API for easy access to data related to blockchain using ExpressJS and MongoDB."
+    ]
+  },
+  {
+    "companyName": "Dlabs",
+    "startDate": 2017,
+    "endDate": 2018,
+    "titles": ["Django", "Python"],
+    "accomplishments": [
+      "Created simple python scripts to help senior developers with various tasks. ",
+      "Built simple database models and views in Django.",
+      "Improved admin panel to ease workflow for non IT people and fellow developers.",
+      "Wrote simple tests",
+      "Learnt how to appreciate coffee."
+    ]
+  }
+]
