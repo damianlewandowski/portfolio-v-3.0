@@ -1,32 +1,38 @@
-import React from "react";
+import React, { CSSProperties } from "react";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
-import { Grid } from "@material-ui/core";
+import { Grid, GridProps } from "@material-ui/core";
+import { SIDEBAR_WIDTH } from "../../constants";
 
 const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     page: {
-      height: "100vh"
+      minHeight: "100vh",
+      [theme.breakpoints.up("sm")]: {
+        width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
+        marginLeft: SIDEBAR_WIDTH
+      }
     }
   })
 );
 
 export default function withPage<P extends object>(
-  Component: React.ComponentType<P>
+  Component: React.ComponentType<P>,
+  imageUrl?: string,
+  gridProps?: GridProps
 ): React.FC<P> {
   return ({ ...props }) => {
     const classes = useStyles();
     return (
       <Grid
+        style={{
+          backgroundImage: `url(${imageUrl})`
+        }}
         container
-        spacing={0}
         direction="column"
-        alignItems="flex-start"
-        justify="center"
-        style={{ minHeight: "100vh" }}
+        className={classes.page}
+        {...gridProps}
       >
-        <Grid item xs={12}>
-          <Component {...props} />
-        </Grid>
+        <Component {...props} />
       </Grid>
     );
   };
