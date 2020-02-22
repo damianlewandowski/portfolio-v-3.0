@@ -1,8 +1,8 @@
 import React from "react";
 
 import Sidebar from "./Sidebar";
-import {mount, shallow} from "enzyme";
-import {List} from "@material-ui/core";
+import { mount, shallow } from "enzyme";
+import { List } from "@material-ui/core";
 
 it("renders correctly", () => {
   const wrapper = shallow(<Sidebar />);
