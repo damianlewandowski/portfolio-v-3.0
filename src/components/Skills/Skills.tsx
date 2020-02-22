@@ -4,19 +4,19 @@ import Header from "../Header";
 import SkillItem, { SkillItemProps } from "./SkillItem";
 import { Grid } from "@material-ui/core";
 
-import typescriptImg from "../../static/images/typescript.png";
-import javascriptImg from "../../static/images/javascript.png";
-import pythonImg from "../../static/images/python.jpeg";
-import javaImg from "../../static/images/java.png";
-import cssImg from "../../static/images/css.png";
-import reactImg from "../../static/images/react.png";
-import reduxImg from "../../static/images/redux.png";
-import materialuiImg from "../../static/images/materialui.png";
-import expressjsImg from "../../static/images/express.png";
-import meteorjsImg from "../../static/images/meteorjs.png";
-import mongodbImg from "../../static/images/mongodb.jpeg";
-import postgresImg from "../../static/images/postgres.jpeg";
-import mysqlImg from "../../static/images/mysql.jpeg";
+import typescriptImg from "../../static/images/skills/typescript.png";
+import javascriptImg from "../../static/images/skills/javascript.png";
+import pythonImg from "../../static/images/skills/python.jpeg";
+import javaImg from "../../static/images/skills/java.png";
+import cssImg from "../../static/images/skills/css.png";
+import reactImg from "../../static/images/skills/react.png";
+import reduxImg from "../../static/images/skills/redux.png";
+import materialuiImg from "../../static/images/skills/materialui.png";
+import expressjsImg from "../../static/images/skills/express.png";
+import meteorjsImg from "../../static/images/skills/meteorjs.png";
+import mongodbImg from "../../static/images/skills/mongodb.jpeg";
+import postgresImg from "../../static/images/skills/postgres.jpeg";
+import mysqlImg from "../../static/images/skills/mysql.jpeg";
 
 const Skills = () => {
   const skills: SkillItemProps[] = [
@@ -75,12 +75,16 @@ const Skills = () => {
   ];
 
   return (
-    <div style={{ padding: 2, overflow: "hidden" }}>
+    <div style={{ overflow: "hidden" }}>
       <Header title={"Skills"} />
 
       <Grid container spacing={1}>
         {skills.map(skill => (
-          <SkillItem imgPath={skill.imgPath} name={skill.name} />
+          <SkillItem
+            key={`Skill-${skill.name}`}
+            imgPath={skill.imgPath}
+            name={skill.name}
+          />
         ))}
       </Grid>
     </div>

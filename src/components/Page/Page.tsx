@@ -7,7 +7,7 @@ const useStyles = makeStyles((theme: Theme) =>
   createStyles({
     page: {
       minHeight: "100vh",
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("md")]: {
         width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
         marginLeft: SIDEBAR_WIDTH
       }
