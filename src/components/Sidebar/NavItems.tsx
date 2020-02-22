@@ -46,14 +46,14 @@ const NavItems = ({ onClick }: Props) => {
       href: "#experience"
     },
     {
-      text: "Projects",
-      icon: <ListAltIcon style={{ color: purple[500] }} />,
-      href: "#projects"
-    },
-    {
       text: "Skills",
       icon: <EqualizerIcon style={{ color: green[500] }} />,
       href: "#skills"
+    },
+    {
+      text: "Projects",
+      icon: <ListAltIcon style={{ color: purple[500] }} />,
+      href: "#projects"
     }
   ];
 

@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Voter",
+    "imgName": "voter.png",
+    "description": "An app that handles authentication and authorization. You can do any basic CRUD operations like (create, edit, etc.) polls, on which other people can vote. You can vote anonymously or as a logged in user.",
+    "technologiesUsed": [
+      "React", "ExpressJS", "Redux", "React-Router", "NodeJS", "PassportJS", "MongoDB", "Material-UI"
+    ],
+    "whatLearnt": "I learnt how to structure a NodeJS application into a fullstack one. How to perform CRUD operation in Express.JS application with MongoDB as a database. I also used PassportJS for an OAauth2 login functionality (Basically logging in through google, facebook or other platform).",
+    "appUrl": "https://limitless-tor-52837.herokuapp.com/polls/5e51332ddb9dc800173a88a8",
+    "githubUrl": "https://github.com/damianlewandowski/voter"
+  },
+  {
+    "title": "Dungeon Crawler",
+    "imgName": "dungeon-crawler.png",
+    "description": "Old school dungeon crawler. 2D game in which you need to find an exit from the dungeon and beat the boss. Along the way you meet many enemies. You may also find a better weapon and armor. I think the most impressive aspect of this project is the fact that I didn't use any rendering library. This is pure React and CSS!",
+    "technologiesUsed": [
+      "React", "Redux", "CSS", "ExpressJS"
+    ],
+    "whatLearnt": "I learnt how to think deeply about a problem. Generating random labirynths was not an easy task.",
+    "appUrl": "https://damianlewandowski.github.io/dungeon-crawler/",
+    "githubUrl": "https://github.com/damianlewandowski/dungeon-crawler"
+  },
+  {
+    "title": "Game of Life",
+    "imgName": "game-of-life.png",
+    "description": "Find out how and in what shapes micro organisms evolve by following 4 simple rules established by famous mathematician John Horton Conway in 1970.",
+    "technologiesUsed": [
+      "React", "CSS"
+    ],
+    "whatLearnt": "How to create cool simulations in an easy.",
+    "appUrl": "https://damianlewandowski.github.io/game-of-life/",
+    "githubUrl": "https://github.com/damianlewandowski/game-of-life"
+  }, {
+    "title": "Weather App",
+    "imgName": "weather-app.png",
+    "description": "One of my first applications. Check your weather for the next couple of days!",
+    "technologiesUsed": [
+      "React", "CSS"
+    ],
+    "whatLearnt": "How to make API calls and work with React",
+    "appUrl": "https://damianlewandowski.github.io/weatherapp-react/",
+    "githubUrl": "https://github.com/damianlewandowski/weatherapp-react"
+  }
+]
