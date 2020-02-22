@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme: Theme) =>
     },
     drawer: {
       width: SIDEBAR_WIDTH,
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("md")]: {
         width: SIDEBAR_WIDTH,
         flexShrink: 0
       }
@@ -25,23 +25,9 @@ const useStyles = makeStyles((theme: Theme) =>
     sideNav: {
       height: "100vh"
     },
-    textContainer: {
-      position: "absolute",
-      left: "50%",
-      top: "50%",
-      transform: "translate(-50%, -50%)",
-      textTransform: "capitalize"
-    },
-
-    appBar: {
-      // [theme.breakpoints.up("sm")]: {
-      //   width: `calc(100% - ${SIDEBAR_WIDTH}px)`,
-      //   marginLeft: SIDEBAR_WIDTH
-      // }
-    },
 
     menuButton: {
-      [theme.breakpoints.up("sm")]: {
+      [theme.breakpoints.up("md")]: {
         display: "none"
       }
     }
@@ -58,7 +44,7 @@ export default function Sidebar() {
   };
   return (
     <div className={classes.root}>
-      <Hidden smUp>
+      <Hidden mdUp>
         <AppBar>
           <Toolbar>
             <IconButton
@@ -93,7 +79,8 @@ export default function Sidebar() {
             <NavItems onClick={() => handleDrawerToggle()} />
           </Drawer>
         </Hidden>
-        <Hidden xsDown implementation="css">
+
+        <Hidden smDown={true} implementation="css">
           <Drawer
             className={classes.drawer}
             variant="permanent"
@@ -107,28 +94,6 @@ export default function Sidebar() {
           </Drawer>
         </Hidden>
       </nav>
-
-      {/*<Drawer*/}
-      {/*  className={classes.drawer}*/}
-      {/*  variant="permanent"*/}
-      {/*  classes={{*/}
-      {/*    paper: classes.drawerPaper*/}
-      {/*  }}*/}
-      {/*  anchor="left"*/}
-      {/*  open={mobileOpen}*/}
-      {/*>*/}
-      {/*  <Box*/}
-      {/*    className={classes.box}*/}
-      {/*    bgcolor="primary.main"*/}
-      {/*    color="primary.contrastText"*/}
-      {/*  >*/}
-      {/*    <Typography className={classes.textContainer} variant="h5">*/}
-      {/*      portfolio*/}
-      {/*    </Typography>*/}
-      {/*  </Box>*/}
-
-      {/*  <NavItems />*/}
-      {/*</Drawer>*/}
     </div>
   );
 }

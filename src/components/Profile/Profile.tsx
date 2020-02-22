@@ -3,7 +3,7 @@ import { Typography } from "@material-ui/core";
 import withPage from "../Page/Page";
 import { createStyles, makeStyles, Theme } from "@material-ui/core/styles";
 import InfoItems from "./InfoItems";
-import backgroundImg from "../../static/images/profile.jpg";
+import backgroundImg from "../../static/images/skills/profile.jpg";
 import classnames from "classnames";
 
 const useStyles = makeStyles((theme: Theme) =>

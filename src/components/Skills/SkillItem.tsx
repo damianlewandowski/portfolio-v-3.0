@@ -23,7 +23,7 @@ const useStyles = makeStyles((theme: Theme) =>
 const SkillItem = ({ imgPath, name }: SkillItemProps) => {
   const classes = useStyles();
   return (
-    <Grid item xs={6} md={2} style={{ padding: 12 }}>
+    <Grid item xs={6} md={4} lg={2} style={{ padding: 12 }}>
       <div
         style={{
           width: 150,
