@@ -2,7 +2,7 @@
   "name": "my-app",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://damianlewandowski.github.io/portfolio-v-3.0",
+  "homepage": "https://damianlewandowski.eu",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
