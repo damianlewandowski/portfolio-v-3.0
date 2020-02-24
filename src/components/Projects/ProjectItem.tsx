@@ -27,6 +27,12 @@ const useStyles = makeStyles((theme: Theme) =>
       width: "100%",
       textAlign: "center",
       padding: "12px"
+    },
+    linksList: {
+      display: "flex"
+    },
+    link: {
+      flex: 0
     }
   })
 );
@@ -54,7 +60,7 @@ const ProjectItem = ({
   return (
     <ListItem>
       <Paper className={classes.paper} elevation={3}>
-        <Grid container spacing={3}>
+        <Grid container spacing={5}>
           <Grid item xs={12}>
             <Typography className={classes.title} variant={"h3"}>
               {title}
@@ -86,8 +92,8 @@ const ProjectItem = ({
           </Grid>
 
           <Grid item xs={12}>
-            <List>
-              <ListItem>
+            <List className={classes.linksList}>
+              <ListItem className={classes.link}>
                 <ListItemIcon>
                   <LanguageIcon />
                 </ListItemIcon>
@@ -100,7 +106,7 @@ const ProjectItem = ({
                 />
               </ListItem>
 
-              <ListItem>
+              <ListItem className={classes.link}>
                 <ListItemIcon>
                   <GitHubIcon />
                 </ListItemIcon>
