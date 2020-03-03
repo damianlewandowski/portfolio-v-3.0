@@ -1,66 +1,105 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`renders correctly 1`] = `
-<WithStyles(ForwardRef(List))>
+<WithStyles(ForwardRef(List))
+  disablePadding={true}
+>
   <WithStyles(ForwardRef(ListItem))
-    button={true}
+    divider={true}
+    selected={true}
+  >
+    <WithStyles(ForwardRef(ListItemText))
+      classes={
+        Object {
+          "primary": "makeStyles-resume-1",
+        }
+      }
+      primary="Resume"
+    />
+  </WithStyles(ForwardRef(ListItem))>
+  <a
+    className="makeStyles-link-2"
+    href="#profile"
     key="Profile"
   >
-    <WithStyles(ForwardRef(ListItemIcon))>
-      <PersonIcon
-        color="primary"
+    <WithStyles(ForwardRef(ListItem))
+      button={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <PersonIcon
+          color="primary"
+        />
+      </WithStyles(ForwardRef(ListItemIcon))>
+      <WithStyles(ForwardRef(ListItemText))
+        primary="Profile"
       />
-    </WithStyles(ForwardRef(ListItemIcon))>
-    <WithStyles(ForwardRef(ListItemText))
-      primary="Profile"
-    />
-  </WithStyles(ForwardRef(ListItem))>
-  <WithStyles(ForwardRef(ListItem))
-    button={true}
+    </WithStyles(ForwardRef(ListItem))>
+  </a>
+  <a
+    className="makeStyles-link-2"
+    href="#experience"
     key="Experience"
   >
-    <WithStyles(ForwardRef(ListItemIcon))>
-      <UpdateIcon
-        color="secondary"
-      />
-    </WithStyles(ForwardRef(ListItemIcon))>
-    <WithStyles(ForwardRef(ListItemText))
-      primary="Experience"
-    />
-  </WithStyles(ForwardRef(ListItem))>
-  <WithStyles(ForwardRef(ListItem))
-    button={true}
-    key="Projects"
-  >
-    <WithStyles(ForwardRef(ListItemIcon))>
-      <ListAltIcon
-        style={
-          Object {
-            "color": "#9c27b0",
+    <WithStyles(ForwardRef(ListItem))
+      button={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <UpdateIcon
+          style={
+            Object {
+              "color": "#37474f",
+            }
           }
-        }
+        />
+      </WithStyles(ForwardRef(ListItemIcon))>
+      <WithStyles(ForwardRef(ListItemText))
+        primary="Experience"
       />
-    </WithStyles(ForwardRef(ListItemIcon))>
-    <WithStyles(ForwardRef(ListItemText))
-      primary="Projects"
-    />
-  </WithStyles(ForwardRef(ListItem))>
-  <WithStyles(ForwardRef(ListItem))
-    button={true}
+    </WithStyles(ForwardRef(ListItem))>
+  </a>
+  <a
+    className="makeStyles-link-2"
+    href="#skills"
     key="Skills"
   >
-    <WithStyles(ForwardRef(ListItemIcon))>
-      <EqualizerIcon
-        style={
-          Object {
-            "color": "#4caf50",
+    <WithStyles(ForwardRef(ListItem))
+      button={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <EqualizerIcon
+          style={
+            Object {
+              "color": "#4caf50",
+            }
           }
-        }
+        />
+      </WithStyles(ForwardRef(ListItemIcon))>
+      <WithStyles(ForwardRef(ListItemText))
+        primary="Skills"
       />
-    </WithStyles(ForwardRef(ListItemIcon))>
-    <WithStyles(ForwardRef(ListItemText))
-      primary="Skills"
-    />
-  </WithStyles(ForwardRef(ListItem))>
+    </WithStyles(ForwardRef(ListItem))>
+  </a>
+  <a
+    className="makeStyles-link-2"
+    href="#projects"
+    key="Projects"
+  >
+    <WithStyles(ForwardRef(ListItem))
+      button={true}
+    >
+      <WithStyles(ForwardRef(ListItemIcon))>
+        <ListAltIcon
+          style={
+            Object {
+              "color": "#9c27b0",
+            }
+          }
+        />
+      </WithStyles(ForwardRef(ListItemIcon))>
+      <WithStyles(ForwardRef(ListItemText))
+        primary="Projects"
+      />
+    </WithStyles(ForwardRef(ListItem))>
+  </a>
 </WithStyles(ForwardRef(List))>
 `;
