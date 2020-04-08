@@ -7,7 +7,7 @@
       "React", "ExpressJS", "Redux", "React-Router", "NodeJS", "PassportJS", "MongoDB", "Material-UI"
     ],
     "whatLearnt": "I learnt how to structure a NodeJS application into a fullstack one. How to perform CRUD operation in Express.JS application with MongoDB as a database. I also used PassportJS for an OAauth2 login functionality (Basically logging in through google, facebook or other platform).",
-    "appUrl": "https://limitless-tor-52837.herokuapp.com/polls/5e51332ddb9dc800173a88a8",
+    "appUrl": "https://limitless-tor-52837.herokuapp.com/",
     "githubUrl": "https://github.com/damianlewandowski/voter"
   },
   {
